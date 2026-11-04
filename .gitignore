@@ -1,0 +1,19 @@
+# Source photos (unreferenced by the site; originals for img/)
+/web/
+/web-full/
+
+# Hosting / server artifacts
+error_log
+*.log
+.hcflag
+.litespeed_flag
+*.bk
+*.bak
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
