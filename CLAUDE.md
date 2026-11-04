@@ -2,6 +2,15 @@
 
 Statický portfólio web fotografa Mareka Stopku: jeden `index.html`, bez build kroku a bez frameworku.
 
+## Ako robiť zmeny (postup)
+1. Raz na začiatku: `git clone https://github.com/robertpales/mrkstpk` a otvor priečinok v Claude Code.
+2. Pred každou prácou: `git pull`
+3. Povedz Claudovi, čo chceš zmeniť (text, fotky, sekcie...).
+4. Skontroluj výsledok: otvor `index.html` v prehliadači.
+5. Keď je to OK, povedz Claudovi „commitni a pushni“. Do pár sekúnd je zmena na webe.
+
+Ak sa niečo pokazí, stačí vrátiť posledný commit (`git revert HEAD`) a pushnúť.
+
 ## Štruktúra
 - `index.html`: celá stránka (HTML + inline CSS/JS)
 - `img/<kategória>/...`: optimalizované fotky `.webp`. Názvy obsahujú hash (napr. `-d1739be1-1600.webp`), takže sa dajú cachovať natrvalo. Keď sa fotka zmení, musí dostať nový názov.
