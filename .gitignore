@@ -17,3 +17,7 @@ desktop.ini
 .vscode/
 .idea/
 *.swp
+
+# Build script cache
+__pycache__/
+*.pyc

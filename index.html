@@ -20,10 +20,10 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="sk_SK">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="favicon.svg?v=0ffe1868" type="image/svg+xml">
-<link rel="icon" href="favicon-32.png?v=0ffe1868" sizes="32x32" type="image/png">
-<link rel="icon" href="favicon-192.png?v=0ffe1868" sizes="192x192" type="image/png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0ffe1868">
+<link rel="icon" href="favicon.svg?v=531379a4" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png?v=531379a4" sizes="32x32" type="image/png">
+<link rel="icon" href="favicon-192.png?v=531379a4" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=531379a4">
 <link rel="preload" href="img/logo-53a3f10f.webp" as="image" type="image/webp" fetchpriority="high">
 <link rel="preload" href="fonts/inter-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>@font-face{font-family:'Inter';font-style:normal;font-weight:300;font-display:swap;src:url(fonts/inter-latin-ext-300-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Inter';font-style:normal;font-weight:300;font-display:swap;src:url(fonts/inter-latin-300-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style>
@@ -222,7 +222,9 @@
   @media(max-width:800px){.about{grid-template-columns:1fr}}
   .about p{color:var(--ink-dim);font-size:15px;line-height:1.9;margin-bottom:1.3em;max-width:52ch}
   .about p strong{color:var(--ink);font-weight:400}
-  .about-img img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  /* photo never taller than ~72% of the screen, so text + whole photo fit after clicking "About" */
+  .about-img{display:flex;justify-content:center}
+  .about-img img{width:100%;max-width:calc(72vh * .8);max-width:calc(72svh * .8);aspect-ratio:4/5;object-fit:cover}
   .about p.about-cta{color:var(--ink)}
   .about p a{color:var(--ink);border-bottom:1px solid var(--ink-dim);transition:border-color .25s}
   .about p a:hover{border-bottom-color:var(--ink)}

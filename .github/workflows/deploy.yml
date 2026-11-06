@@ -30,5 +30,6 @@ jobs:
             --exclude '.github/' \
             --exclude 'CLAUDE.md' \
             --exclude 'README.md' \
+            --exclude 'tools/' \
             -e "ssh -i ~/.ssh/deploy_key -p ${{ secrets.SSH_PORT }}" \
             ./ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.DEPLOY_PATH }}/"
